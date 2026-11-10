@@ -1,0 +1,1560 @@
+# Genius Zone Model School – Complete Website Development Master Prompt
+
+Your project should be developed as a **complete School Management System (SMS) + Dynamic School Website**, not just a normal informational website.
+
+I recommend building it in stages so that you can test each feature before moving to the next one. The website will have four main user areas:
+
+1. Public Website – accessible to everyone.
+2. Admin Dashboard – complete control of the school website and management.
+3. Teacher & Staff Dashboard – academic and administrative activities.
+4. Student & Guardian Dashboard – academic progress, attendance, fees, results and applications.
+
+**Recommended technology:** Next.js + TypeScript + Tailwind CSS + Supabase + Vercel + GitHub.
+
+Below is a master prompt you can give to an AI coding assistant to develop the project.
+
+\# PROJECT: GENIUS ZONE MODEL SCHOOL – COMPLETE DYNAMIC SCHOOL MANAGEMENT WEBSITE\
+\
+\## 1. Your Role\
+\
+Act as a senior full-stack web developer, software architect, UI/UX designer, database engineer, cybersecurity specialist, and school management system developer.\
+\
+Develop a fully functional, professional, secure, dynamic, mobile-responsive school website and complete School Management System for:\
+\
+\*\*Genius Zone Model School (GZMS)\*\*  \
+জিনিয়াস জোন মডেল স্কুল\
+\
+\*\*Address:\*\* Balachowra, Badarganj, Rangpur, Bangladesh  \
+\*\*Email:\*\* info.sbf21\@gmail.com  \
+\*\*Phone:\*\* 01308177171  \
+\*\*Tagline:\*\* Where Dreams Come True  \
+\*\*বাংলা স্লোগান:\*\* যেখানে স্বপ্ন সত্যি হয়।\
+\
+The website must be easy to operate, especially from Android mobile phones and desktop computers.\
+\
+Do not create a static demo website. All major functions must connect to a real database and work dynamically.\
+\
+Use fictional sample data for initial demonstrations, but make all real school data editable through the Admin Dashboard.\
+\
+\---\
+\
+\# PART 1: TECHNOLOGY AND DESIGN\
+\
+\## 2. Technology Stack\
+\
+Use the following technologies:\
+\
+\- Frontend: Next.js (App Router) and TypeScript.\
+\- Styling: Tailwind CSS.\
+\- UI: Modern reusable components.\
+\- Database: Supabase PostgreSQL.\
+\- Authentication: Supabase Auth.\
+\- File Storage: Supabase Storage.\
+\- PDF Generation: jsPDF or an equivalent reliable PDF library.\
+\- Charts: Recharts.\
+\- QR Code: QR generation and camera-based scanning library.\
+\- Deployment: GitHub + Vercel.\
+\- SMS: Configurable SMS gateway or Android-based SMS bridge.\
+\- Payment: Manual bKash transaction verification initially, with an option for a future payment gateway.\
+\
+Use environment variables for all API keys, passwords and secrets.\
+\
+Never expose administrator credentials, database service-role keys or SMS gateway secrets in frontend code.\
+\
+\## 3. Website Design\
+\
+Create a premium educational website.\
+\
+Design theme:\
+\- Royal blue.\
+\- White.\
+\- Light blue.\
+\- Small golden accents.\
+\- Professional typography.\
+\- Clean cards.\
+\- Rounded corners.\
+\- Attractive animations.\
+\- Responsive navigation.\
+\- Bengali and English language support.\
+\
+The website must look professional on:\
+\- Android phones.\
+\- Tablets.\
+\- Laptops.\
+\- Desktop computers.\
+\
+Use the Genius Zone Model School logo. Allow the administrator to upload or replace the logo.\
+\
+\---\
+\
+\# PART 2: PUBLIC WEBSITE\
+\
+\## 4. Header and Navigation\
+\
+When a visitor opens the website, the homepage must load automatically.\
+\
+Header:\
+\
+\- School logo.\
+\- Genius Zone Model School.\
+\- Bengali school name.\
+\- School address.\
+\- Email: info.sbf21\@gmail.com.\
+\- Tagline: Where Dreams Come True.\
+\
+Navigation buttons:\
+\
+1\. Home\
+2\. About Us\
+3\. Admission\
+4\. Results\
+5\. Photo Gallery\
+6\. Application Portal\
+7\. Notice Board\
+8\. Contact\
+9\. Student Login\
+10\. Staff Login\
+11\. Admin Login\
+\
+Use a responsive mobile menu.\
+\
+\## 5. Dynamic Promotional Popup\
+\
+Every public website page must support a promotional popup.\
+\
+Admin features:\
+\- Upload a poster or promotional image.\
+\- Add a clickable external link.\
+\- Set popup start and end dates.\
+\- Enable or disable the popup.\
+\- Set popup frequency.\
+\- Upload a replacement poster.\
+\- Preview the poster before publishing.\
+\
+When a visitor clicks the poster, redirect them to the administrator's specified URL.\
+\
+Do not display the popup when it is disabled or expired.\
+\
+\## 6. Homepage\
+\
+Create the following homepage sections.\
+\
+\### A. Hero Section\
+\- Large school banner.\
+\- School logo.\
+\- Tagline.\
+\- Admission button.\
+\- About School button.\
+\- Attractive school-related images.\
+\
+\### B. About Our School\
+\- School history.\
+\- Vision.\
+\- Mission.\
+\- Educational philosophy.\
+\- Facilities.\
+\- Teaching methods.\
+\- School achievements.\
+\
+All content must be editable by the administrator.\
+\
+\### C. President's Speech\
+\- President's photograph.\
+\- Name.\
+\- Designation.\
+\- Speech.\
+\- Signature image if uploaded.\
+\
+\### D. Director's Speech\
+\- Director's photograph.\
+\- Name.\
+\- Designation.\
+\- Speech.\
+\- Signature image if uploaded.\
+\
+\### E. Notice Board\
+Display the latest three notices.\
+\
+Each notice should have:\
+\- Title.\
+\- Date.\
+\- Short description.\
+\- PDF download.\
+\- View details.\
+\
+Display the latest two notices prominently on the homepage.\
+\
+\### F. Admission Notice\
+Display the current admission announcement with:\
+\- Admission session.\
+\- Available classes.\
+\- Application deadline.\
+\- Admission requirements.\
+\- Apply Now button.\
+\
+\### G. School Committee\
+Display committee members with:\
+\- Photograph.\
+\- Name.\
+\- Designation.\
+\- Short profile.\
+\
+\### H. School Statistics\
+\
+Show dynamic statistics:\
+\
+\- Total students.\
+\- Currently attending students.\
+\- Total teachers.\
+\- Total staff.\
+\- Total classes.\
+\
+Statistics must come from the database.\
+\
+\### I. Teacher Profiles\
+\
+Display teacher cards containing:\
+\- Photograph.\
+\- Name.\
+\- Designation.\
+\- Subject.\
+\- Educational qualification.\
+\- Short biography.\
+\
+Admin can add, edit, remove and publish teacher profiles.\
+\
+\### J. Student of the Week / Month\
+\
+Automatically select students based on:\
+\- Attendance.\
+\- Homework submission.\
+\- Academic performance.\
+\- Class participation.\
+\- Teacher evaluation.\
+\
+Display separate weekly and monthly awards.\
+\
+\### K. Teacher of the Month\
+\
+Automatically calculate teacher performance using:\
+\- Attendance.\
+\- Class attendance records.\
+\- Homework management.\
+\- Academic responsibilities.\
+\
+Display the selected teacher with their photograph and achievements.\
+\
+Provide an administrator override and approval option.\
+\
+\### L. Contact Form\
+\
+Visitors can submit:\
+\- Name.\
+\- Email.\
+\- Phone.\
+\- Subject.\
+\- Message.\
+\
+Save all submissions in the database and display them in the Admin Dashboard.\
+\
+\### M. Footer\
+\
+Include:\
+\- School logo and name.\
+\- Address.\
+\- Phone: 01308177171.\
+\- Email: info.sbf21\@gmail.com.\
+\- Social media links.\
+\- Important educational links.\
+\
+Important Bangladesh education links:\
+\- Ministry of Education: https\://moedu.gov.bd/\
+\- Directorate of Secondary and Higher Education: https\://dshe.gov.bd/\
+\- Directorate of Primary Education: https\://dpe.gov.bd/\
+\- National Curriculum and Textbook Board: https\://nctb.gov.bd/\
+\- Bangladesh Education Boards: https\://educationboard.gov.bd/\
+\- BANBEIS: https\://banbeis.gov.bd/\
+\
+All links must be editable from the Admin Dashboard.\
+\
+\---\
+\
+\# PART 3: ONLINE ADMISSION SYSTEM\
+\
+\## 7. Dynamic Admission Application\
+\
+Create a professional online admission form.\
+\
+Required information:\
+\
+\### Student Information\
+\- Student name in Bangla.\
+\- Student name in English (BLOCK LETTERS).\
+\- Date of birth.\
+\- Gender.\
+\- Photograph.\
+\- Previous school.\
+\- Previous class.\
+\- Applying class.\
+\- Village.\
+\- Post office.\
+\- Upazila/Thana.\
+\- District.\
+\- Country (default: Bangladesh).\
+\
+\### Guardian Information\
+\- Father's name (BLOCK LETTERS).\
+\- Mother's name (BLOCK LETTERS).\
+\- Guardian's phone number.\
+\- Alternative phone number.\
+\- Present address.\
+\- Permanent address.\
+\
+\### Application Information\
+\- Academic session.\
+\- Class.\
+\- Application date.\
+\- Previous academic result.\
+\- Other necessary documents.\
+\
+\## 8. Automatic Application Processing\
+\
+When a student submits an application:\
+\
+1\. Validate the submitted information.\
+2\. Save the application in the database.\
+3\. Generate a unique application ID.\
+4\. Automatically assign a registration number.\
+5\. Generate a roll number according to the admission session and class.\
+6\. Generate a professional one-page A4 application PDF.\
+7\. Allow the applicant to download the PDF.\
+8\. Show application status.\
+9\. Allow the applicant to track the application.\
+\
+Registration number format:\
+\
+\*\*GZMS0001\*\*\
+\
+Rules:\
+\- First four characters: GZMS.\
+\- Last four characters: sequential number.\
+\- First registration number: GZMS0001.\
+\- Next: GZMS0002, GZMS0003, and so on.\
+\- Never duplicate registration numbers.\
+\- Generate numbers securely on the server/database.\
+\
+Roll number:\
+\- Begin from 0001.\
+\- Maintain a unique roll within the relevant academic session and class.\
+\- Never assign duplicate active rolls within the same class/session.\
+\
+Do not confuse the application ID, registration number and class roll number.\
+\
+\## 9. Admission Approval System\
+\
+Admin can:\
+\
+\- View all applications.\
+\- Search by name, roll or registration number.\
+\- Filter by class and application date.\
+\- View uploaded documents.\
+\- Approve applications.\
+\- Reject applications.\
+\- Request corrections.\
+\- Add administrative remarks.\
+\- Assign a class and final roll.\
+\
+When approved:\
+\
+1\. Create the student's permanent profile.\
+2\. Activate student login.\
+3\. Connect guardian access.\
+4\. Generate a congratulation letter.\
+5\. Include approved scholarship or fee waiver information.\
+6\. Generate a downloadable A4 PDF.\
+7\. Notify the student/guardian.\
+\
+The congratulation letter must contain the school logo, official school information, date and authorized signature.\
+\
+\---\
+\
+\# PART 4: RESULT MANAGEMENT SYSTEM\
+\
+\## 10. Result Page\
+\
+Create two separate result sections.\
+\
+\### A. Admission Result\
+\
+Search using:\
+\- Application ID.\
+\- Registration number.\
+\- Roll number.\
+\
+Display:\
+\- Student name.\
+\- Applied class.\
+\- Application status.\
+\- Admission decision.\
+\- Scholarship/waiver details when approved.\
+\
+\### B. Academic Result\
+\
+Search using:\
+\- Student roll number.\
+\- Class.\
+\- Academic session.\
+\- Examination name.\
+\
+Display:\
+\- Subject names.\
+\- Subject-wise marks.\
+\- Grade.\
+\- GPA.\
+\- Total marks.\
+\- Position.\
+\- Remarks.\
+\- Overall performance.\
+\
+After a successful result search, automatically generate a professional downloadable PDF result card.\
+\
+\## 11. Result Permission System\
+\
+Admin:\
+\- Can create, edit, approve and publish results.\
+\- Has final authority over all results.\
+\
+Teachers:\
+\- Can upload marks and submit results.\
+\- Cannot publish or permanently change approved results.\
+\
+Staff:\
+\- Can enter results if authorized.\
+\- Cannot publish results.\
+\
+Only Admin can finalize and publish academic results.\
+\
+Maintain result revision history and audit logs.\
+\
+\---\
+\
+\# PART 5: PHOTO GALLERY\
+\
+\## 12. Dynamic Gallery\
+\
+Create a simple photo gallery.\
+\
+Features:\
+\- Admin uploads 4–10 photos per gallery album.\
+\- Add album title.\
+\- Add event name.\
+\- Add date.\
+\- Add description.\
+\- Display photos in a responsive grid.\
+\- Full-screen image viewing.\
+\- Admin can edit, replace or delete photos.\
+\
+Optimize images for fast loading.\
+\
+\---\
+\
+\# PART 6: APPLICATION PORTAL\
+\
+\## 13. Application Types\
+\
+Create one unified application portal for teachers and students.\
+\
+Application categories:\
+\
+1\. Leave of Absence.\
+2\. Transfer Certificate.\
+3\. Fee Waiver.\
+4\. Scholarship Application.\
+5\. Other Applications.\
+\
+\### Application Form\
+\
+When a student logs in, automatically retrieve:\
+\- Student name.\
+\- Registration number.\
+\- Roll number.\
+\- Class.\
+\- Guardian information.\
+\
+When a teacher logs in, automatically retrieve:\
+\- Teacher name.\
+\- Username.\
+\- Designation.\
+\
+The applicant selects:\
+\- Application category.\
+\- Application subject.\
+\- Reason.\
+\- From date.\
+\- To date (for leave).\
+\- Supporting documents.\
+\- Additional information.\
+\
+When submitted:\
+\
+1\. Save the application.\
+2\. Generate application ID.\
+3\. Record date and time.\
+4\. Generate an A4 application PDF.\
+5\. Allow automatic download.\
+6\. Display application status in the applicant dashboard.\
+\
+\### Approval Workflow\
+\
+Admin can:\
+\- Review.\
+\- Approve.\
+\- Reject.\
+\- Request additional information.\
+\- Add comments.\
+\
+After approval, generate a final official PDF with:\
+\- School logo.\
+\- Official letterhead.\
+\- Application information.\
+\- Approval date.\
+\- Director's signature.\
+\- Head Teacher's signature where applicable.\
+\- Official seal if uploaded.\
+\
+Save the approved PDF in the applicant's profile.\
+\
+For transfer certificates and official certificates, allow the administrator to verify required records before issuing them.\
+\
+\---\
+\
+\# PART 7: ADMIN DASHBOARD\
+\
+\## 14. Complete Admin Control Panel\
+\
+Create a secure administrator dashboard.\
+\
+Dashboard statistics:\
+\- Total students.\
+\- Present students today.\
+\- Absent students today.\
+\- Total teachers.\
+\- Present teachers.\
+\- Absent teachers.\
+\- Total staff.\
+\- Pending admission applications.\
+\- Pending certificates.\
+\- Pending fee approvals.\
+\- Total fee collection.\
+\- Pending results.\
+\- Pending notices.\
+\
+Use charts and graphs.\
+\
+\### Admin Management Modules\
+\
+1\. Student Management.\
+2\. Teacher Management.\
+3\. Staff Management.\
+4\. Guardian Management.\
+5\. Admission Management.\
+6\. Attendance Management.\
+7\. Result Management.\
+8\. Admit Card Management.\
+9\. Homework Management.\
+10\. Fee Management.\
+11\. Scholarship Management.\
+12\. Notice Management.\
+13\. Application Management.\
+14\. Photo Gallery Management.\
+15\. Class and Subject Management.\
+16\. Routine Management.\
+17\. Teacher Performance.\
+18\. Student Performance.\
+19\. SMS Management.\
+20\. Report Generation.\
+21\. Popup Poster Management.\
+22\. Website Content Management.\
+23\. School Settings.\
+24\. User Permissions.\
+25\. Backup and Audit Logs.\
+\
+\## 15. Student Management\
+\
+Admin can:\
+\- Add students.\
+\- Edit student details.\
+\- Upload student photographs.\
+\- Assign classes.\
+\- Assign sections.\
+\- Assign roll numbers.\
+\- Assign registration numbers.\
+\- Promote students.\
+\- Transfer students.\
+\- Deactivate accounts.\
+\- View attendance.\
+\- View academic records.\
+\- View fees.\
+\- View applications.\
+\- Reset passwords.\
+\
+Every new student record must use the same basic information structure:\
+\
+\- Bangla name.\
+\- English name in BLOCK LETTERS.\
+\- Father's name in BLOCK LETTERS.\
+\- Mother's name in BLOCK LETTERS.\
+\- Village.\
+\- Post office.\
+\- Upazila/Thana.\
+\- District.\
+\- Country.\
+\- Phone number.\
+\- Photograph.\
+\- Gender.\
+\- Date of birth.\
+\- Class.\
+\- Academic session.\
+\
+Teachers and authorized staff adding students must use this same form.\
+\
+\## 16. Teacher and Staff Management\
+\
+Admin can:\
+\- Add teachers.\
+\- Add staff.\
+\- Edit profiles.\
+\- Assign subjects.\
+\- Assign classes.\
+\- Create usernames.\
+\- Set permissions.\
+\- View attendance.\
+\- View performance.\
+\- Activate/deactivate accounts.\
+\- Reset passwords.\
+\
+\## 17. Class and Subject Management\
+\
+Admin can create:\
+\- Play Group.\
+\- Nursery.\
+\- Class 1.\
+\- Class 2.\
+\- Class 3.\
+\- Class 4.\
+\- Class 5.\
+\- Class 6.\
+\- Class 7.\
+\- Class 8.\
+\- Class 9.\
+\- Additional classes when required.\
+\
+Admin can add or remove subjects for each class.\
+\
+When a class is selected in the homework or admit-card module, automatically display its assigned subjects.\
+\
+\---\
+\
+\# PART 8: SMART QR CODE ATTENDANCE SYSTEM\
+\
+\## 18. QR-Based Student Attendance\
+\
+Create an integrated mobile-friendly QR attendance system.\
+\
+Every student receives a unique QR code.\
+\
+The QR code should contain a secure student identifier, not sensitive personal information.\
+\
+\### Scanner Features\
+\
+Admin, teacher or authorized staff opens the attendance scanner on an Android phone.\
+\
+The scanner:\
+1\. Requests camera permission.\
+2\. Scans the student ID card QR code.\
+3\. Retrieves student information from the database.\
+4\. Displays student name.\
+5\. Displays photograph.\
+6\. Displays class and roll.\
+7\. Records attendance automatically.\
+8\. Shows the attendance time.\
+9\. Prevents duplicate attendance.\
+\
+\### Voice Announcement\
+\
+After a successful scan, pronounce the student's name loudly using Bengali text-to-speech when supported.\
+\
+Example:\
+\
+"দেলোয়ার হোসেন, উপস্থিতি গ্রহণ করা হয়েছে।"\
+\
+Display a clear green confirmation message.\
+\
+If the student is already marked present, show a warning instead of creating duplicate attendance.\
+\
+\### Automatic Absent Detection\
+\
+Admin can configure:\
+\- School starting time.\
+\- Attendance closing time.\
+\- SMS sending time.\
+\
+Default SMS time: 9:20 AM.\
+\
+At 9:20 AM:\
+1\. Identify all students without a valid attendance record.\
+2\. Mark them absent according to school attendance rules.\
+3\. Generate an absent list.\
+4\. Send Bangla SMS to their guardians.\
+5\. Record SMS delivery status.\
+\
+The attendance cutoff must be configurable.\
+\
+\### SMS System\
+\
+Use a reliable SMS integration.\
+\
+Preferred option:\
+\- Android phone with a SIM card and an authorized Android SMS bridge.\
+\
+Alternative:\
+\- Compatible GSM modem or SMS gateway API.\
+\
+Phone number: 01308177171.\
+\
+Important technical requirement:\
+\
+A normal website running in a browser cannot silently send SMS through an Android SIM card. Therefore, build a separate Android SMS bridge or use an authorized SMS gateway. The bridge must receive authenticated SMS jobs from the backend.\
+\
+Provide message templates such as:\
+\
+"সম্মানিত অভিভাবক, আপনার সন্তান [Student Name] আজ [Date] তারিখে বিদ্যালয়ে উপস্থিত হয়নি। অনুগ্রহ করে বিদ্যালয়ের সাথে যোগাযোগ করুন। — Genius Zone Model School"\
+\
+Include SMS queue, retry, delivery logs and duplicate prevention.\
+\
+\---\
+\
+\# PART 9: TEACHER DASHBOARD\
+\
+\## 19. Teacher Login\
+\
+Teachers log in using:\
+\- Username.\
+\- Password.\
+\
+Teachers can change their own passwords.\
+\
+\### Teacher Dashboard\
+\
+Display:\
+\- Today's classes.\
+\- Assigned subjects.\
+\- Class routine.\
+\- Monthly attendance.\
+\- Total working days.\
+\- Present days.\
+\- Absent days.\
+\- Performance graphs.\
+\- Homework.\
+\- Student attendance.\
+\- Examination information.\
+\
+\### Teacher Functions\
+\
+1\. View assigned classes.\
+2\. Mark student attendance manually.\
+3\. Scan student QR codes.\
+4\. Add students if authorized.\
+5\. Upload student marks.\
+6\. Submit results.\
+7\. Collect fees if authorized.\
+8\. Download approved examination admit cards.\
+9\. Add homework.\
+10\. Evaluate homework.\
+11\. Send student feedback.\
+12\. Submit leave applications.\
+13\. View school notices.\
+\
+\### Homework Management\
+\
+Teachers can assign:\
+\- Class.\
+\- Subject.\
+\- Topic.\
+\- Homework description.\
+\- Submission date.\
+\- Attachment.\
+\- Instructions.\
+\
+Homework evaluation options:\
+\
+\- Best.\
+\- Good.\
+\- Not Satisfied.\
+\
+Teachers can provide feedback.\
+\
+Students and guardians can see homework status in their dashboards.\
+\
+Teachers can see:\
+\- Number of assigned homework.\
+\- Number of submitted homework.\
+\- Number of pending homework.\
+\- Student performance.\
+\- Class performance.\
+\
+\---\
+\
+\# PART 10: STUDENT AND GUARDIAN DASHBOARD\
+\
+\## 20. Student Login\
+\
+Students log in using:\
+\- Registration number.\
+\- Password.\
+\
+Allow students to change their passwords securely.\
+\
+Guardians should have a separate authorized account or linked access to their child's profile.\
+\
+\### Student Dashboard\
+\
+Display:\
+\
+\*\*A. Personal Profile\*\*\
+\- Student photograph.\
+\- Name.\
+\- Registration number.\
+\- Roll number.\
+\- Class.\
+\- Guardian details.\
+\
+\*\*B. Academic Progress\*\*\
+\- Subject-wise results.\
+\- GPA.\
+\- Examination history.\
+\- Performance graphs.\
+\- Academic progress reports.\
+\
+\*\*C. Attendance\*\*\
+\- Present days.\
+\- Absent days.\
+\- Attendance percentage.\
+\- Monthly attendance chart.\
+\
+\*\*D. Homework\*\*\
+\- Assigned homework.\
+\- Subject.\
+\- Submission deadline.\
+\- Teacher feedback.\
+\- Best / Good / Not Satisfied status.\
+\
+\*\*E. Fees\*\*\
+\- Total fees.\
+\- Paid fees.\
+\- Due fees.\
+\- Payment history.\
+\- Payment instructions.\
+\
+\*\*F. Notices\*\*\
+\- General school notices.\
+\- Class-specific notices.\
+\- Personal notices.\
+\
+\*\*G. Applications\*\*\
+\- Submitted applications.\
+\- Approval status.\
+\- Downloadable PDFs.\
+\- Approved certificates.\
+\
+\*\*H. Admit Cards\*\*\
+\- Available examination admit cards.\
+\- Download button.\
+\- Examination information.\
+\
+\---\
+\
+\# PART 11: EXAMINATION ADMIT CARD GENERATOR\
+\
+\## 21. Dynamic Admit Card Management\
+\
+Create a professional examination admit-card generator.\
+\
+Admin can:\
+\- Create an examination.\
+\- Set examination name.\
+\- Set examination start date.\
+\- Set examination end date.\
+\- Set admit-card distribution date.\
+\- Add examination rules in Bangla.\
+\- Assign classes.\
+\- Select subjects.\
+\- Approve admit cards.\
+\
+\### Admit Card Form\
+\
+Automatically retrieve:\
+\- Student name.\
+\- Photograph.\
+\- Registration number.\
+\- Class.\
+\- Roll number.\
+\
+Automatically display subjects according to the selected class.\
+\
+Generate a single-page A4 PDF.\
+\
+The PDF must contain:\
+\- School logo.\
+\- School name.\
+\- Address.\
+\- Examination name.\
+\- Student photograph.\
+\- Student details.\
+\- Subject list.\
+\- Examination dates.\
+\- Five examination rules in Bangla.\
+\- Head Teacher's signature.\
+\- Official school seal if uploaded.\
+\
+Important:\
+\- One student = one admit card.\
+\- Exactly one A4 page per admit card.\
+\- No duplicate copies.\
+\- No unwanted extra blank pages.\
+\
+\### Teacher Admit Card Request\
+\
+Teachers can request or generate draft admit cards.\
+\
+Admin must approve before the admit card becomes available in the student dashboard.\
+\
+\---\
+\
+\# PART 12: FEE MANAGEMENT AND BIKASH PAYMENT\
+\
+\## 22. Fee Collection System\
+\
+Create a complete fee management module.\
+\
+Admin can configure:\
+\- Admission fee.\
+\- Monthly tuition fee.\
+\- Examination fee.\
+\- Session fee.\
+\- Other charges.\
+\- Scholarships.\
+\- Fee waivers.\
+\- Discounts.\
+\
+\### Student Payment Instructions\
+\
+Display the school's bKash payment instructions.\
+\
+Initially, use manual transaction verification.\
+\
+Student:\
+1\. Opens the payment section.\
+2\. Views payment instructions.\
+3\. Sends payment through bKash.\
+4\. Enters the transaction ID.\
+5\. Enters payment amount.\
+6\. Selects payment category.\
+7\. Submits payment information.\
+\
+Admin:\
+1\. Receives a notification.\
+2\. Checks the transaction.\
+3\. Approves or rejects payment.\
+4\. Updates the fee ledger.\
+5\. Generates a fee confirmation challan.\
+\
+\### Fee Confirmation Challan\
+\
+Generate an A4 PDF containing:\
+\- School logo.\
+\- Student name.\
+\- Registration number.\
+\- Class.\
+\- Roll number.\
+\- Paid amount.\
+\- Payment date.\
+\- Transaction ID.\
+\- Remaining due.\
+\- Payment status.\
+\- Paid stamp.\
+\- Head Teacher's signature.\
+\
+Only approved payments should receive the PAID status.\
+\
+Do not treat an unverified transaction ID as confirmed payment.\
+\
+\---\
+\
+\# PART 13: NOTICE AND DOCUMENT MANAGEMENT\
+\
+\## 23. Dynamic Notice Management\
+\
+Admin can:\
+\- Write notices.\
+\- Upload PDF notices.\
+\- Upload school letterhead.\
+\- Create notices on official letterhead.\
+\- Select notice publication date.\
+\- Set expiry date.\
+\- Select target audience.\
+\
+Target audience:\
+\- All students.\
+\- Specific class.\
+\- Specific student.\
+\- All teachers.\
+\- Specific teachers.\
+\- All staff.\
+\- Specific staff.\
+\- Guardians.\
+\
+\### Automatic PDF Generation\
+\
+When Admin creates a notice:\
+1\. Use the uploaded official letterhead.\
+2\. Add notice title.\
+3\. Add date.\
+4\. Add notice body.\
+5\. Add authorized signature.\
+6\. Generate PDF.\
+7\. Publish the notice.\
+\
+When a visitor clicks a published notice, the PDF should open or download automatically.\
+\
+\### Personal Notice\
+\
+Admin can send notices to:\
+\- Individual students.\
+\- Selected teachers.\
+\- Selected staff.\
+\- Entire classes.\
+\- Multiple selected recipients.\
+\
+Recipients should receive dashboard notifications and, where enabled, SMS notifications.\
+\
+\---\
+\
+\# PART 14: AUTOMATIC MESSAGE SYSTEM\
+\
+\## 24. Message Templates\
+\
+Create an editable message template system.\
+\
+Default templates:\
+\
+1\. Student absence.\
+2\. Monthly fee due.\
+3\. Examination notice.\
+4\. Result published.\
+5\. Admission approved.\
+6\. Application approved.\
+7\. Student of the week.\
+8\. Student of the month.\
+9\. Homework reminder.\
+10\. Fee payment confirmation.\
+\
+Admin can:\
+\- Edit templates.\
+\- Select recipients.\
+\- Preview messages.\
+\- Send individual messages.\
+\- Send bulk messages.\
+\- View message history.\
+\
+Use placeholders such as:\
+\
+[Student Name]  \
+[Guardian Name]  \
+[Class]  \
+[Roll]  \
+[Date]  \
+[Due Amount]  \
+[School Name]\
+\
+Support Bangla Unicode SMS and check message length and cost before bulk sending.\
+\
+\---\
+\
+\# PART 15: CLASS ROUTINE AND HOMEWORK\
+\
+\## 25. Class Routine Management\
+\
+Admin can create a weekly class routine.\
+\
+Fields:\
+\- Class.\
+\- Section.\
+\- Subject.\
+\- Teacher.\
+\- Day.\
+\- Starting time.\
+\- Ending time.\
+\- Room number.\
+\
+Teachers can view their assigned routine.\
+\
+Students can view their class routine.\
+\
+Allow routine download as PDF.\
+\
+\## 26. Homework Dashboard\
+\
+Teachers add homework through their dashboards.\
+\
+Admin can monitor homework activity.\
+\
+Students can:\
+\- View homework.\
+\- Upload homework answers or attachments.\
+\- Submit before the deadline.\
+\- See teacher feedback.\
+\
+Display homework performance through graphs.\
+\
+\---\
+\
+\# PART 16: AUTOMATIC PERFORMANCE AND AWARDS\
+\
+\## 27. Student of the Week and Month\
+\
+Create an automatic student performance calculation.\
+\
+Suggested configurable criteria:\
+\- Attendance: 30%.\
+\- Academic performance: 35%.\
+\- Homework: 20%.\
+\- Participation and behaviour: 15%.\
+\
+Admin can change the weight of each category.\
+\
+Automatically calculate:\
+\- Student of the Week.\
+\- Student of the Month.\
+\- Class performance.\
+\- Most improved student.\
+\
+Do not publish student awards automatically without administrator review.\
+\
+\## 28. Teacher of the Month\
+\
+Suggested criteria:\
+\- Attendance.\
+\- Teaching responsibilities.\
+\- Homework evaluation.\
+\- Student progress.\
+\- Assigned duties.\
+\
+Generate teacher rankings internally.\
+\
+Admin reviews and confirms the final teacher of the month.\
+\
+Display the approved award on the homepage.\
+\
+\---\
+\
+\# PART 17: DAILY, WEEKLY AND MONTHLY REPORTS\
+\
+\## 29. Advanced Report Generator\
+\
+Admin can generate reports for:\
+\- A selected date.\
+\- A date range.\
+\- A week.\
+\- A month.\
+\- An academic session.\
+\- A selected class.\
+\- A selected teacher.\
+\
+\### Attendance Report\
+\
+Display:\
+\- Total students.\
+\- Present students.\
+\- Absent students.\
+\- Attendance percentage.\
+\- Total teachers.\
+\- Present teachers.\
+\- Absent teachers.\
+\
+\### Homework Report\
+\
+Display:\
+\- Total assigned homework.\
+\- Total submitted homework.\
+\- Pending homework.\
+\- Best.\
+\- Good.\
+\- Not Satisfied.\
+\
+\### Academic Report\
+\
+Display:\
+\- Results.\
+\- Student performance.\
+\- Class performance.\
+\- Subject-wise averages.\
+\- Improvement trends.\
+\
+\### Financial Report\
+\
+Display:\
+\- Total collected fees.\
+\- Outstanding fees.\
+\- Payment categories.\
+\- Approved transactions.\
+\- Rejected transactions.\
+\
+Allow PDF and Excel export.\
+\
+\---\
+\
+\# PART 18: SECURITY AND USER PERMISSIONS\
+\
+\## 30. Role-Based Access Control\
+\
+Create four main roles:\
+\
+1\. Admin.\
+2\. Teacher.\
+3\. Staff.\
+4\. Student.\
+\
+Guardians have linked read-only access to authorized student information.\
+\
+\### Admin\
+\
+Full system access.\
+\
+\### Teacher\
+\
+Only assigned classes, students and authorized modules.\
+\
+\### Staff\
+\
+Only assigned administrative modules.\
+\
+\### Student\
+\
+Only their own profile and academic information.\
+\
+\### Guardian\
+\
+Only linked children's information.\
+\
+Security requirements:\
+\- Secure authentication.\
+\- Role-based access control.\
+\- Database-level access policies.\
+\- Password reset.\
+\- Session management.\
+\- Input validation.\
+\- File upload validation.\
+\- Audit logs.\
+\- Login protection.\
+\- Rate limiting.\
+\- Secure PDF access.\
+\- No public exposure of private student records.\
+\
+Every official generated document must use the correct authorized signature.\
+\
+The Director's signature and Head Teacher's signature must be uploaded and managed through Admin Settings. Never generate a fake handwritten signature or claim a document has been signed without authorization.\
+\
+Maintain a document approval record.\
+\
+\---\
+\
+\# PART 19: DATABASE ARCHITECTURE\
+\
+\## 31. Create a Proper Relational Database\
+\
+Design database tables for:\
+\
+\- users\
+\- roles\
+\- student_profiles\
+\- guardian_profiles\
+\- teacher_profiles\
+\- staff_profiles\
+\- classes\
+\- sections\
+\- subjects\
+\- admissions\
+\- registrations\
+\- student_enrollments\
+\- attendance\
+\- teacher_attendance\
+\- examinations\
+\- exam_subjects\
+\- results\
+\- result_details\
+\- admit_cards\
+\- homework\
+\- homework_submissions\
+\- homework_evaluations\
+\- fees\
+\- fee_payments\
+\- scholarships\
+\- applications\
+\- notices\
+\- notice_recipients\
+\- messages\
+\- sms_queue\
+\- sms_logs\
+\- school_routines\
+\- gallery_albums\
+\- gallery_photos\
+\- committees\
+\- school_settings\
+\- popup_banners\
+\- contact_messages\
+\- document_templates\
+\- document_approvals\
+\- audit_logs\
+\
+Use proper primary keys, foreign keys, indexes and unique constraints.\
+\
+Important:\
+\- Prevent duplicate student registrations.\
+\- Prevent duplicate attendance.\
+\- Prevent duplicate payment approvals.\
+\- Keep academic records when students are promoted.\
+\- Maintain session-wise student enrollment.\
+\- Keep historical data.\
+\- Use database transactions for sensitive operations.\
+\
+\---\
+\
+\# PART 20: DEPLOYMENT\
+\
+\## 32. GitHub + Vercel Deployment\
+\
+The completed project must be deployable using:\
+\
+GitHub → Vercel → Supabase.\
+\
+Provide:\
+\- Complete source code.\
+\- Folder structure.\
+\- package.json.\
+\- Database SQL migrations.\
+\- Supabase configuration.\
+\- Environment variable example.\
+\- README.md.\
+\- Installation instructions.\
+\- Deployment instructions.\
+\
+The project must build successfully on Vercel.\
+\
+Optimize:\
+\- Image loading.\
+\- Database queries.\
+\- Mobile performance.\
+\- PDF generation.\
+\- Dashboard loading.\
+\- API requests.\
+\
+Do not load all student records at once. Use pagination, filtering and server-side queries.\
+\
+Use appropriate caching for public pages and avoid caching private student information.\
+\
+\---\
+\
+\# PART 21: DEVELOPMENT AND DELIVERY INSTRUCTIONS\
+\
+\## 33. Build the Project Step by Step\
+\
+Do not attempt to build every feature in one untested operation.\
+\
+Develop in the following phases:\
+\
+\*\*Phase 1 – Foundation\*\*\
+\- Create Next.js project.\
+\- Configure TypeScript.\
+\- Configure Tailwind CSS.\
+\- Connect Supabase.\
+\- Create database schema.\
+\- Create school branding.\
+\- Create responsive homepage.\
+\
+\*\*Phase 2 – Public Website\*\*\
+\- About school.\
+\- Speeches.\
+\- Notice board.\
+\- Admission notice.\
+\- Committee.\
+\- Teacher profiles.\
+\- Photo gallery.\
+\- Contact form.\
+\- Popup poster.\
+\
+\*\*Phase 3 – Authentication\*\*\
+\- Admin login.\
+\- Teacher login.\
+\- Staff login.\
+\- Student login.\
+\- Guardian access.\
+\- Role permissions.\
+\
+\*\*Phase 4 – Admission\*\*\
+\- Admission form.\
+\- Registration number generation.\
+\- Roll number generation.\
+\- PDF application.\
+\- Application tracking.\
+\- Approval workflow.\
+\- Congratulation letter.\
+\
+\*\*Phase 5 – Student Management\*\*\
+\- Student records.\
+\- Teacher records.\
+\- Class management.\
+\- Subject management.\
+\- Student dashboards.\
+\
+\*\*Phase 6 – Academic Management\*\*\
+\- Results.\
+\- Homework.\
+\- Routine.\
+\- Examination management.\
+\- Admit card generator.\
+\
+\*\*Phase 7 – Attendance\*\*\
+\- QR generation.\
+\- Android camera scanner.\
+\- Voice announcement.\
+\- Manual attendance.\
+\- Automatic absent detection.\
+\- SMS integration.\
+\
+\*\*Phase 8 – Finance\*\*\
+\- Fee structure.\
+\- bKash instructions.\
+\- Transaction ID submission.\
+\- Payment verification.\
+\- Fee challan PDF.\
+\- Scholarship and waiver.\
+\
+\*\*Phase 9 – Applications and Notices\*\*\
+\- Application portal.\
+\- Approval system.\
+\- Official PDF generation.\
+\- Notice management.\
+\- Personal notifications.\
+\
+\*\*Phase 10 – Reports\*\*\
+\- Attendance reports.\
+\- Academic reports.\
+\- Homework reports.\
+\- Financial reports.\
+\- Teacher performance reports.\
+\
+\*\*Phase 11 – Testing and Deployment\*\*\
+\- Test every module.\
+\- Test mobile responsiveness.\
+\- Test database permissions.\
+\- Test PDF page sizes.\
+\- Test QR scanning.\
+\- Test SMS delivery.\
+\- Test backup and recovery.\
+\- Deploy on Vercel.\
+\
+\## 34. Important Development Rules\
+\
+1\. Build a genuinely functional system, not a visual-only prototype.\
+2\. Use real database operations.\
+3\. Do not create fake success messages.\
+4\. Never hardcode dynamic school data.\
+5\. Make all editable information manageable from Admin.\
+6\. Do not expose sensitive student data publicly.\
+7\. Every form must have validation.\
+8\. Every important action must show a confirmation.\
+9\. Every generated PDF must be properly formatted.\
+10\. Every dashboard must be responsive.\
+11\. Keep the interface simple enough for non-technical teachers.\
+12\. Use Bangla and English wherever appropriate.\
+13\. Do not leave important buttons without functionality.\
+14\. Do not use placeholder APIs for features claimed to be complete.\
+15\. Provide a testing checklist for each development phase.\
+\
+\## 35. How I Want You to Work\
+\
+I am the founder and director of Genius Zone Model School. I am developing this project step by step and may use a mobile phone or desktop computer.\
+\
+I want you to guide me as my professional software development partner.\
+\
+For every phase:\
+\
+1\. Explain what we are building.\
+2\. Show the exact folder structure.\
+3\. Provide complete code for each required file.\
+4\. Explain where to paste each file.\
+5\. Give installation commands.\
+6\. Explain how to configure Supabase.\
+7\. Explain how to test the feature.\
+8\. Fix errors before moving to the next phase.\
+9\. Keep previous features working when adding new features.\
+10\. Provide GitHub commit and Vercel deployment instructions.\
+\
+Do not give incomplete code or skip necessary configuration.\
+\
+If a feature requires an external service, explain its setup, cost and limitations before implementation.\
+\
+Start with \*\*PHASE 1: PROJECT FOUNDATION AND PUBLIC HOMEPAGE\*\*.\
+\
+First, give me the complete project architecture, database design overview, folder structure, installation commands and the exact first steps to build the website.\
+\
+Wait for my confirmation and testing before moving to Phase 2.\
+\
+\*\*FINAL GOAL: Build a complete, secure, modern and fully functional Genius Zone Model School digital management ecosystem.\*\*\
+
+## Recommended development roadmap
+
+## GZMS Development Roadmap
+
+1. **Phase 1 – Website foundation**
+
+   (Start here)
+
+   Homepage, navigation, design, Supabase and database.
+2. **Phase 2 – Admin and login system**
+
+   Secure Admin, Teacher, Staff and Student dashboards.
+3. **Phase 3 – Admission and student management**
+
+   Applications, registration, student profiles and approvals.
+4. **Phase 4 – Academic management**
+
+   Results, homework, routines and admit cards.
+5. **Phase 5 – QR attendance and SMS**
+
+   Android scanner, voice announcement and guardian SMS.
+6. **Phase 6 – Finance and applications**
+
+   bKash verification, fee challans, scholarships and certificates.
+7. **Phase 7 – Reports and automation**
+
+   Performance analytics, awards and school reports.
+8. **Phase 8 – Testing and deployment**
+
+   GitHub, Supabase, Vercel and final security testing.
+
+## Important recommendations before development
+
+1. **SMS:** A website alone cannot send SMS through your Android SIM automatically. We will need an Android SMS bridge or a compatible SMS gateway.
+2. **Registration:** Use a database-controlled sequence to prevent duplicate registration numbers.
+3. **Security:** Student and guardian information must remain private.
+4. **PDF:** All official documents should use your uploaded school letterhead, logo and authorized signatures.
+5. **Payments:** Start with manual bKash transaction verification before integrating an automatic payment gateway.
+6. **Cost:** Supabase, Vercel and SMS services may have usage limits or charges. We should design the initial version to minimize expenses.
+
+## Let's begin building
+
+My recommendation is to start with Phase 1 and make sure the homepage, database and deployment work correctly before building the management system.
+
+I can guide you through every file, command, GitHub upload and Vercel deployment, one step at a time.

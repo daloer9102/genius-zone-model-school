@@ -1,0 +1,6 @@
+{
+  "name": "Genius Zone Model School (GZMS)",
+  "description": "Complete dynamic School Management System and modern public educational portal for Genius Zone Model School, Badarganj, Rangpur, Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
